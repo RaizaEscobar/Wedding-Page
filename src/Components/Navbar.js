@@ -20,7 +20,7 @@ function Navbar() {
                             <a href="#start" className="nav-links" onClick={closeMobileMenu}> Home</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#Myprojects" className="nav-links" onClick={closeMobileMenu}> Asistencia</a>
+                            <a href="Registration" className="nav-links" onClick={closeMobileMenu}> Asistencia</a>
                         </li>
                         <li className="nav-item">
                             <a href="#aboutMe" className="nav-links" onClick={closeMobileMenu}> Informacion</a>
