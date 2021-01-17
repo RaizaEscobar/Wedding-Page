@@ -17,16 +17,19 @@ function Navbar() {
                     </div>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
-                            <a href="#start" className="nav-links" onClick={closeMobileMenu}> Home</a>
+                            <a href="/" className="nav-links" onClick={closeMobileMenu}> Home</a>
                         </li>
                         <li className="nav-item">
-                            <a href="Registration" className="nav-links" onClick={closeMobileMenu}> Asistencia</a>
+                            <a href="registration" className="nav-links" onClick={closeMobileMenu}> Asistencia</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#aboutMe" className="nav-links" onClick={closeMobileMenu}> Informacion</a>
+                            <a href="information" className="nav-links" onClick={closeMobileMenu}> Informacion</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#Footer" className="nav-links" onClick={closeMobileMenu}> Otros</a>
+                            <a href="#Footer" className="nav-links" onClick={closeMobileMenu}> Nuestros Momentos</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#Footer" className="nav-links" onClick={closeMobileMenu}> Playlist Boda</a>
                         </li>
                     </ul>
                 </div>

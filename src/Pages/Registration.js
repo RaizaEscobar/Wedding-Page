@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import MyInput from "../Components/MyInput"
 import MySelect from '../Components/MySelect'
 import axios from 'axios'
+import './Registration.css'
 
 function Registration() {
     const [name, setName] = useState("");
@@ -74,7 +75,9 @@ function Registration() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <>
+        <p className="intro">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <form onSubmit={handleSubmit} className="form">
             <MyInput label="Nombre y Apellido" value={name} inputClick={(e)=> setName(e.target.value)} />
             <MySelect label="Asistiré" options={["Sí", "No"]} firstEmpty changeSelect={(e) => setIsAssisting(e.target.value === "Sí")} />
             {isAssisting && <MySelect label="Vendré acompañado" options={["Sí", "No"]} firstEmpty changeSelect={(e)=> setHasPartner(e.target.value === "Sí")} />}
@@ -86,17 +89,18 @@ function Registration() {
             {isAssisting && <MySelect label="Irémos en bus" options={["Sí", "No"]} firstEmpty changeSelect={(e)=>setIsUsingBus(e.target.value === "Sí")} />}
             {isAssisting && <h2>Consideraciones especiales:</h2>}
             {isAssisting && <MySelect label="regimen especial" options={["vegetariano", "vegano", "diabetico"]} firstEmpty changeSelect={(e)=> setFoodStyle(e.target.value)}/>}
-            {isAssisting && hasPartner && <MySelect label={`regimen especial de ${partnerName}`} options={["vegetariano", "vegano", "diabetico"]} firstEmpty changeSelect={(e)=> setPartnerFoodStyle(e.target.value)} />}
+            {isAssisting && hasPartner && <MySelect label={`regimen especial de ${partnerName ? partnerName : ""}`} options={["vegetariano", "vegano", "diabetico"]} firstEmpty changeSelect={(e)=> setPartnerFoodStyle(e.target.value)} />}
             {children.map((element, index) => {
-                return <MySelect label={`regimen especial de ${element.name}`} options={["vegetariano", "vegano", "diabetico"]} firstEmpty changeSelect={(e)=> changeChildFoodStyle(e, index)} />
+                return <MySelect key={index} label={`regimen especial de ${element.name ? element.name : ""}`} options={["vegetariano", "vegano", "diabetico"]} firstEmpty changeSelect={(e)=> changeChildFoodStyle(e, index)} />
             })}
             {isAssisting && <MySelect label="mis intolerancias o alergias" options={["gluten", "lactosa", "frutos secos"]} firstEmpty changeSelect={(e)=> setIntolerances(e.target.value)}/>}
-            {isAssisting && hasPartner && <MySelect label={`intolerancias o alergias de ${partnerName}`} options={["gluten", "lactosa", "frutos secos"]} firstEmpty changeSelect={(e)=> setPartnerIntolerances(e.target.value)}/>}
+            {isAssisting && hasPartner && <MySelect label={`intolerancias o alergias de ${partnerName ? partnerName : ""}`} options={["gluten", "lactosa", "frutos secos"]} firstEmpty changeSelect={(e)=> setPartnerIntolerances(e.target.value)}/>}
             {children.map((element, index) => {
-                return <MySelect label={`intolerancias o alergias de ${element.name}`} options={["gluten", "lactosa", "frutos secos"]} firstEmpty changeSelect={(e)=> changeChildIntolerances(e, index)} />
+                return <MySelect key={index} label={`intolerancias o alergias de ${element.name ? element.name : ""}`} options={["gluten", "lactosa", "frutos secos"]} firstEmpty changeSelect={(e)=> changeChildIntolerances(e, index)} />
             })}
             <button>Confirmar</button>
         </form>
+        </>
     )
 }
 

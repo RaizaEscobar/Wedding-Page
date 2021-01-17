@@ -1,3 +1,44 @@
+#root {
+
+  background: linear-gradient(45deg, #F2DAD8, #F2D5E5, #EBEBF2, #F2F2F2);
+  -webkit-animation: gradientAnimation 40s ease infinite;
+  animation: gradientAnimation 40s ease infinite;
+  background-size: 400% 400%;
+
+  height: 100vh;
+}
+
+@-webkit-keyframes gradientAnimation {
+  0% {
+    background-position: 0% 30%, 0 0;
+  }
+
+  50% {
+    background-position: 100% 70%, 0 0;
+  }
+
+  100% {
+    background-position: 0% 30%, 0 0;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 30%, 0 0;
+  }
+
+  50% {
+    background-position: 100% 70%, 0 0;
+  }
+
+  100% {
+    background-position: 0% 30%, 0 0;
+  }
+}
+
+
+
+
 .App {
   text-align: center;
 }
@@ -32,6 +73,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
