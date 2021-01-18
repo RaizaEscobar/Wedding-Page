@@ -98,7 +98,7 @@ function Registration() {
             {children.map((element, index) => {
                 return <MySelect key={index} label={`intolerancias o alergias de ${element.name ? element.name : ""}`} options={["gluten", "lactosa", "frutos secos"]} firstEmpty changeSelect={(e)=> changeChildIntolerances(e, index)} />
             })}
-            <button>Confirmar</button>
+            <button className="button">Confirmar</button>
         </form>
         </>
     )

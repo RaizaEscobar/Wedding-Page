@@ -23,10 +23,10 @@ function Navbar() {
                             <a href="registration" className="nav-links" onClick={closeMobileMenu}> Asistencia</a>
                         </li>
                         <li className="nav-item">
-                            <a href="information" className="nav-links" onClick={closeMobileMenu}> Informacion</a>
+                            <a href="information" className="nav-links" onClick={closeMobileMenu}> Donde y Cuando</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#Footer" className="nav-links" onClick={closeMobileMenu}> Nuestros Momentos</a>
+                            <a href="Gallery" className="nav-links" onClick={closeMobileMenu}>Galeria</a>
                         </li>
                         <li className="nav-item">
                             <a href="#Footer" className="nav-links" onClick={closeMobileMenu}> Playlist Boda</a>

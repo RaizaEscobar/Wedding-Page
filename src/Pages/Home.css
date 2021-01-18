@@ -5,6 +5,7 @@
 }
 
 
+
 .home-container{
     background-image: url(../images/7.jpg);
     background-position: center;
@@ -33,7 +34,7 @@
 }
 
 .home div:first-child h1{
-    font-size: 55px;
+    font-size:80px;
 }
 
 .home div:first-child p{

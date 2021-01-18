@@ -1,0 +1,17 @@
+
+.titulo{
+  text-align: center;
+  margin: 40px 40px 60px;
+  color: #fff;
+}
+.gallery{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img{
+  max-height: 100%;
+  max-width: 100%;
+}
