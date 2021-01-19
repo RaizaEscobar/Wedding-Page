@@ -13,6 +13,7 @@ function Information() {
                 </div>
             </div>
             <div className="map">
+            <span>Lugar de ceremonia y banquete</span>
             <iframe 
                         src="https://maps.google.com/maps?q=masllombart&hl=es&z=14&output=embed" 
                         frameBorder="0"
@@ -28,6 +29,7 @@ function Information() {
                 </div>
             </div>
             <div className="map">
+            <span>Lugar de recogida y retorno del autocar</span>
             <iframe 
                         src="https://maps.google.com/maps?q=41.37395,2.14980&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                         className="map"

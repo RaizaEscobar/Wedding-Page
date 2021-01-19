@@ -6,6 +6,7 @@ import Home from "./Pages/Home"
 import Registration from "./Pages/Registration"
 import Information from "./Pages/Information"
 import Gallery from "./Pages/Gallery"
+import Playlist from "./Pages/Playlist"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route exact path="/registration" component={Registration} />
       <Route exact path="/information" component={Information} />
       <Route exact path="/Gallery" component={Gallery} />
+      <Route exact path="/Playlist" component={Playlist} />
         </Switch>
 
     </Router>

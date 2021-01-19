@@ -29,7 +29,7 @@ function Navbar() {
                             <a href="Gallery" className="nav-links" onClick={closeMobileMenu}>Galeria</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#Footer" className="nav-links" onClick={closeMobileMenu}> Playlist Boda</a>
+                            <a href="Playlist" className="nav-links" onClick={closeMobileMenu}> Playlist Boda</a>
                         </li>
                     </ul>
                 </div>
