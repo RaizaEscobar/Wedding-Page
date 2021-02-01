@@ -1,13 +1,12 @@
-import styled from "styled-components";
+import React from 'react'
 
-export default styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 100%;
-  background-color: transparent;
-  color: #fff;
-  margin: 0 10px;
-  font-size: 4em;
-`;
+
+function Card(props) {
+    return (
+        <div >
+            {props.children}
+        </div>
+    )
+}
+
+export default Card

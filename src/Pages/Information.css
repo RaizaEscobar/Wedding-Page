@@ -6,14 +6,15 @@
     padding: 1rem;
     max-width: 1024px;
     margin: 0 auto;
-    font-family: var(--font-sans);
     grid-template-columns: repeat(2, 1fr);
+    font-family: 'EB Garamond', serif;
 }
 .place {
     position: relative;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    min-height: 300px;
     padding: 1rem;
     width: 100%;
     text-align: center;
@@ -37,6 +38,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.map span{
+    margin: 50px;
 }
 
 .map iframe{

@@ -8,17 +8,17 @@ import Information from "./Pages/Information"
 import Gallery from "./Pages/Gallery"
 import Playlist from "./Pages/Playlist"
 
-function App() {
+function App(props) {
   return (
     <>
     <Router>
-      <Navbar />
       <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/registration" component={Registration} />
-      <Route exact path="/information" component={Information} />
-      <Route exact path="/Gallery" component={Gallery} />
-      <Route exact path="/Playlist" component={Playlist} />
+      <Route exact path="/home/:lang?" component={Home} />
+      <Route exact path="/registration/:lang?" component={Registration} />
+      <Route exact path="/information/:lang?" component={Information} />
+      <Route exact path="/gallery/:lang?" component={Gallery} />
+      <Route exact path="/playlist/:lang?" component={Playlist} />
         </Switch>
 
     </Router>
