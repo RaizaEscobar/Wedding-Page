@@ -1,3 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100&display=swap');
+
+#root {
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(45deg, #c8bbc6, #EBEBF2, #d1c6d0, #F2F2F2);
+  -webkit-animation: gradientAnimation 40s ease infinite;
+  animation: gradientAnimation 40s ease infinite;
+  background-size: 400% 400%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes gradientAnimation {
+  0% {
+    background-position: 0% 30%, 0 0;
+  }
+
+  50% {
+    background-position: 100% 70%, 0 0;
+  }
+
+  100% {
+    background-position: 0% 30%, 0 0;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 30%, 0 0;
+  }
+
+  50% {
+    background-position: 100% 70%, 0 0;
+  }
+
+  100% {
+    background-position: 0% 30%, 0 0;
+  }
+}
+
+
+
+
 .App {
   text-align: center;
 }
@@ -32,6 +76,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
