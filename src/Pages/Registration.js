@@ -82,7 +82,7 @@ function Registration(props) {
     <>
       <Navbar lang={props.match.params.lang}/>
       <p className="intro">
-        {props.match.params.lang !== "" && props.match.params.lang === "it" ? "Piò esistere un giorno più speciale del 20...?" : "¿Puede existir un día más especial que el 20...?"}
+        {props.match.params.lang !== "" && props.match.params.lang === "it" ? "Può esistere un giorno più speciale del 20...?" : "¿Puede existir un día más especial que el 20...?"}
         <br />
         {props.match.params.lang !== "" && props.match.params.lang === "it" ? "Può esistere un mese migliore di giugno...?" : "¿Puede existir un mes más ideal que Junio...?"}
         <br />
