@@ -26,7 +26,6 @@ function Playlist(props) {
       }, 
       header: { 'Content-Type': 'application/x-www-form-urlencoded' } 
     }
-    console.log(header)
     axios.post("https://accounts.spotify.com/api/token", params, header)
       .then(response => {
         spotifyApi.setAccessToken(response.data.access_token);
