@@ -201,7 +201,7 @@ function Registration(props) {
             />
           );
         })}
-        <button className="button">{props.match.params.lang !== "" && props.match.params.lang ? "Confermare" : "Confirmar"}</button>
+        <button className="button">{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Confermare" : "Confirmar"}</button>
       </form>
     </>
   );

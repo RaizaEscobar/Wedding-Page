@@ -5,7 +5,7 @@ import "./Galeria.css"
 
 
 const images = [];
-for(let i=1; i<=96; i++){
+for(let i=1; i<=97; i++){
   let image = require(`../images/${i}.jpg`);
   images.push(image);
 }

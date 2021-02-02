@@ -5,8 +5,8 @@ import Navbar from "../Components/Navbar"
 import "./Playlist.css"
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: "c735e88942e84b9aa0e287c4021b3995",
-  clientSecret: "b015183f22fc409586ad62593ec7515f"
+  clientId: process.env.CLIENTID_SPOTIFY,
+  clientSecret: process.env.CLIENTSECRET_SPOTIFY
 });
 
 
@@ -17,12 +17,20 @@ function Playlist(props) {
   useEffect(() => {
     const params = new URLSearchParams();
     params.append("grant_type", "client_credentials");
-    params.append("client_id", "c735e88942e84b9aa0e287c4021b3995");
-    params.append("client_secret", "b015183f22fc409586ad62593ec7515f");
-    axios.post("https://accounts.spotify.com/api/token", params, { auth: { username: "c735e88942e84b9aa0e287c4021b3995", password: "b015183f22fc409586ad62593ec7515f" }, header: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+    params.append("client_id", process.env.CLIENTID_SPOTIFY);
+    params.append("client_secret", process.env.CLIENTSECRET_SPOTIFY);
+    let header = {
+       "auth": { 
+        "username": "c735e88942e84b9aa0e287c4021b3995", 
+        "password": "b015183f22fc409586ad62593ec7515f" 
+      }, 
+      header: { 'Content-Type': 'application/x-www-form-urlencoded' } 
+    }
+    console.log(header)
+    axios.post("https://accounts.spotify.com/api/token", params, header)
       .then(response => {
         spotifyApi.setAccessToken(response.data.access_token);
-        spotifyApi.getPlaylistTracks("0beK2LcdMn8HyXj77pL5Ux").then(response => {
+        spotifyApi.getPlaylistTracks("2EQlxTqFC2jOS04BVmLGgA").then(response => {
           let tracks = response.body.items.map(element => {
             return {
               artist: element.track.artists[0].name,
@@ -80,36 +88,36 @@ function Playlist(props) {
   return (
     <>
       <Navbar lang={props.match.params.lang} />
-      <h2>Lista de canciones</h2>
-      <p>aqui explicamos que tienen que hacer</p>
+      <h2>{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Lista di canzoni per la festa!" : "Lista de canciones para la fiesta!"}</h2>
+      <p>{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Abbiamo bisogno del vostro aiuto per riempire la playlist della festa!! L'unica cosa che dovete fare è pensare a quelle canzoni che vi fanno ballare, cercarle e cliccare su 'aggiungi' per aggiungerle alla lista" : "Necesitamos vuestra ayuda para llenar la playList de la fiesta!! Lo único que teneis que hacer es pensar en aquellas canciones que os hacen bailar, buscarlas y darle al boton de añadir para que se agregen a la lista"}</p>
       <div className="playlist-container">
         <div>
-          <form onSubmit={handleSubmit}>
-            <input type="text" />
+          <form className="search"  onSubmit={handleSubmit}>
+            <input type="search"  placeholder={props.match.params.lang !== "" && props.match.params.lang === "it" ? "Cerca" : "Busca"}/>
             <button>{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Cerca" : "Busca"}</button>
           </form>
           {result.map((element, index) => {
             return (
-              <div key={index} >
+              <div className="song-search" key={index} >
                 <img src={element.picture} alt="album" />
-                <span>{element.artist}</span>
+                <span style={{width:"10%"}}>{element.artist}</span>
                 <span>{element.song}</span>
-                <audio controls>
+                <audio controls controlsList="nodownload">
                   <source src={element.audio} />
                 </audio>
-                <button onClick={()=>{onAddSong(element)}}>{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Aggiungi" : "Añade"}</button>
+                 <button onClick={()=>{onAddSong(element)}}>{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Aggiungi" : "Añade"}</button>
               </div>
             )
           })}
         </div>
-        <div>
+        <div className="list">
           {playlist.map((element, index) => {
             return (
               <div key={index} className="song">
                 <img src={element.picture} alt="album" />
                 <span>{element.artist}</span>
                 <span>{element.song}</span>
-                <audio controls>
+                <audio controls controlsList="nodownload">
                   <source src={element.audio} />
                 </audio>
               </div>

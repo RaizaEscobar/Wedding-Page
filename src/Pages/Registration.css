@@ -34,10 +34,10 @@
         padding:10px 20px;
         border-radius: 5px;
         box-shadow: 5px 5px 15px 5px #a590a2;
-        /* box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4); */
         cursor: pointer;
         -webkit-transition: all ease-in-out 300ms;
         transition: all ease-in-out 300ms;
+        border-color: transparent ;
       }
       .button:hover {
         box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);

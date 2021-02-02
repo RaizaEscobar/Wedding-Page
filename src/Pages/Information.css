@@ -8,6 +8,7 @@
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     font-family: 'EB Garamond', serif;
+    margin-top: 80px;
 }
 .place {
     position: relative;
@@ -42,6 +43,7 @@
 
 .map span{
     margin: 50px;
+    font-size: 16px;
 }
 
 .map iframe{

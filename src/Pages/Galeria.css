@@ -30,7 +30,7 @@
   filter: grayscale(0);
 }
 .grid-container div:hover {
-  border-color: coral;
+  border-color: #610F7F;
 }
 .grid-container div img {
   max-width: 100%;
