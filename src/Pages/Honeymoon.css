@@ -1,0 +1,13 @@
+.title{
+    font-size: 45px;
+}
+
+.description {
+    font-size: 20px;
+    margin: 20px auto;
+    width: 75%;
+}
+
+.grid-container div img {
+    filter: grayscale(0);
+  }

@@ -34,6 +34,9 @@ function Navbar(props) {
                             <a href={`/playlist/${props.lang}`} className="nav-links" onClick={closeMobileMenu}>{props.lang === "it" ? "Playlist Matrimonio" : "Playlist Boda"}</a>
                         </li>
                         <li className="nav-item">
+                            <a href={`/honeymoon/${props.lang}`} className="nav-links" onClick={closeMobileMenu}>{props.lang === "it" ? "Viaggio di nozze" : "Luna de miel"}</a>
+                        </li>
+                        <li className="nav-item">
                             <a href="/home/it" className="nav-links" onClick={closeMobileMenu}><img src={italian} alt="it" /></a>
                         </li>
                         <li className="nav-item">
