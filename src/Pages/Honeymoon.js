@@ -33,7 +33,7 @@ function Honeymoon(props){
                 <Card><img src={maldives_3} alt="maldives_3"/></Card>
             </div>
 			<div className="button-container">
-				<a className="button" href="https://paypal.me/pools/c/8yg3NKbsGr" target="_blank">{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Partecipare alla luna di miele" : "Participar en la luna de miel"}</a>
+				<a className="button" href="https://www.paypal.com/pools/c/8zE8Xn3L5m" target="_blank">{props.match.params.lang !== "" && props.match.params.lang === "it" ? "Partecipare alla luna di miele" : "Participar en la luna de miel"}</a>
 			</div>
         </>
     )
